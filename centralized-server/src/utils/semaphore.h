@@ -13,5 +13,6 @@ int createSemaphore();
 int closeSemaphore();
 int waitSemaphore();
 int postSemaphore();
+int findSemaphore();
 
 #endif

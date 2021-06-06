@@ -3,6 +3,7 @@
 #include "utils/semaphore.h"
 
 int main() {
+    findSemaphore();
     closeSemaphore();
     printf("Successfully closed the semaphore");
 

@@ -46,3 +46,15 @@ int postSemaphore() {
 
     return 0;
 }
+
+int findSemaphore() {
+    
+    sem = sem_open("sem", 0);
+
+    if (sem == SEM_FAILED) {
+        writeToLog("Status: Error while finding the semaphore");
+        exit(EXIT_FAILURE);
+    }
+
+    return 0;
+}
