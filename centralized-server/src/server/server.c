@@ -54,17 +54,15 @@ int allowCORS(const struct _u_request *request, struct _u_response *response, vo
 
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data) {
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
-    char *jsonString = json_dumps(jsonImage, JSON_ENCODE_ANY);
 
     if (jsonImage != NULL) {
-        queueAddItem(&imageList, jsonString);
+        queueAddItem(&imageList, jsonImage);
         postSemaphore();
         writeToLog("Status: Image received");
     } else {
         writeToLog("Status: Error in the image received");
     }
 
-    free(jsonImage);
     ulfius_set_string_body_response(response, 200, "Ok");
     return U_CALLBACK_CONTINUE;
 }
