@@ -1,0 +1,616 @@
+Sun Jun  6 10:23:03 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:23:31 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:23:50 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:26:08 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:38:48 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:39:37 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:41:31 2021
+ - Status: Successfully read config file
+Sun Jun  6 10:50:39 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:13:51 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:14:10 2021
+ - Status: Error starting server
+Sun Jun  6 11:14:14 2021
+ - Status: Server ended
+Sun Jun  6 11:14:37 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:14:41 2021
+ - Status: Error starting server
+Sun Jun  6 11:14:41 2021
+ - Status: Server ended
+Sun Jun  6 11:15:45 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:15:45 2021
+ - Status: Error starting server
+Sun Jun  6 11:15:45 2021
+ - Status: Server ended
+Sun Jun  6 11:17:45 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:17:45 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:21:00 2021
+ - Status: Closing server
+Sun Jun  6 11:21:06 2021
+ - Status: Server ended
+Sun Jun  6 11:21:41 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:21:41 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:21:50 2021
+ - Status: Closing server
+Sun Jun  6 11:21:50 2021
+ - Status: Server ended
+Sun Jun  6 11:22:46 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:22:46 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:22:55 2021
+ - Status: Closing server
+Sun Jun  6 11:22:56 2021
+ - Status: Server ended
+Sun Jun  6 11:30:49 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:30:49 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:33:41 2021
+ - Status: Image received
+Sun Jun  6 11:34:03 2021
+ - Status: Closing server
+Sun Jun  6 11:34:04 2021
+ - Status: Server ended
+Sun Jun  6 11:34:24 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:34:24 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:34:27 2021
+ - Status: Image received
+Sun Jun  6 11:34:40 2021
+ - Status: Closing server
+Sun Jun  6 11:34:41 2021
+ - Status: Server ended
+Sun Jun  6 11:35:34 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:35:34 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:35:39 2021
+ - Status: Closing server
+Sun Jun  6 11:35:40 2021
+ - Status: Server ended
+Sun Jun  6 11:36:04 2021
+ - Status: Successfully read config file
+Sun Jun  6 11:36:04 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 11:36:07 2021
+ - Status: Image received
+Sun Jun  6 11:36:27 2021
+ - Status: Closing server
+Sun Jun  6 11:36:29 2021
+ - Status: Server ended
+Sun Jun  6 14:17:59 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:17:59 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:19:05 2021
+ - Status: Closing server
+Sun Jun  6 14:19:06 2021
+ - Status: Server ended
+Sun Jun  6 14:19:30 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:19:30 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:20:41 2021
+ - Status: Image received
+Sun Jun  6 14:21:26 2021
+ - Status: Closing server
+Sun Jun  6 14:21:27 2021
+ - Status: Server ended
+Sun Jun  6 14:25:21 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:25:21 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:25:27 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:25:27 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:25:41 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:25:41 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:25:48 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:25:48 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:37:44 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:37:44 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:41:53 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:41:53 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:44:40 2021
+ - Status: Image received
+Sun Jun  6 14:44:57 2021
+ - Status: Closing server
+Sun Jun  6 14:44:58 2021
+ - Status: Server ended
+Sun Jun  6 14:45:37 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:45:37 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:45:54 2021
+ - Status: Image received
+Sun Jun  6 14:46:01 2021
+ - Status: Image received
+Sun Jun  6 14:46:03 2021
+ - Status: Image received
+Sun Jun  6 14:46:52 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:46:52 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:47:04 2021
+ - Status: Error while closing the semaphore
+Sun Jun  6 14:47:12 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:47:12 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:47:34 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:47:43 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:48:01 2021
+ - Status: Error while closing the semaphore
+Sun Jun  6 14:48:17 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:48:17 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:48:22 2021
+ - Status: Closing server
+Sun Jun  6 14:48:23 2021
+ - Status: Server ended
+Sun Jun  6 14:48:28 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:48:28 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:48:40 2021
+ - Status: Image received
+Sun Jun  6 14:48:46 2021
+ - Status: Closing server
+Sun Jun  6 14:48:47 2021
+ - Status: Server ended
+Sun Jun  6 14:48:56 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:48:56 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:49:10 2021
+ - Status: Image received
+Sun Jun  6 14:49:14 2021
+ - Status: Closing server
+Sun Jun  6 14:49:15 2021
+ - Status: Server ended
+Sun Jun  6 14:51:57 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:51:57 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:52:02 2021
+ - Status: Image received
+Sun Jun  6 14:52:08 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:52:08 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:52:13 2021
+ - Status: Error while closing the semaphore
+Sun Jun  6 14:52:18 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:52:18 2021
+ - Status: Start server on port:  2020
+Sun Jun  6 14:52:40 2021
+ - Status: Successfully read config file
+Sun Jun  6 14:52:40 2021
+ - Status: Start server on port:  2020
+Mon Jun  7 10:26:22 2021
+ - Status: Successfully read config file
+Mon Jun  7 10:26:22 2021
+ - Status: Start server on port:  2020
+Mon Jun  7 10:27:46 2021
+ - Status: Closing server
+Mon Jun  7 10:27:47 2021
+ - Status: Server ended
+Mon Jun  7 10:39:58 2021
+ - Status: Successfully read config file
+Mon Jun  7 10:39:58 2021
+ - Status: Start server on port:  2020
+Mon Jun  7 10:40:10 2021
+ - Status: Closing server
+Mon Jun  7 10:40:11 2021
+ - Status: Server ended
+Mon Jun  7 10:58:35 2021
+ - Status: Successfully read config file
+Mon Jun  7 10:58:35 2021
+ - Status: Start server on port:  2020
+Mon Jun  7 10:59:49 2021
+ - Status: Closing server
+Mon Jun  7 10:59:50 2021
+ - Status: Server ended
+Mon Jun  7 11:00:06 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:00:06 2021
+ - Status: Start server on port:  2020
+Mon Jun  7 11:00:15 2021
+ - Status: Closing server
+Mon Jun  7 11:00:16 2021
+ - Status: Server ended
+Mon Jun  7 11:03:26 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:03:26 2021
+ - Status: Start node %d on port: %d 2020
+Mon Jun  7 11:03:58 2021
+ - Status: Closing server
+Mon Jun  7 11:03:59 2021
+ - Status: Server ended
+Mon Jun  7 11:04:04 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:04:04 2021
+ - Status: Start node %d on port: %d 2020
+Mon Jun  7 11:04:12 2021
+ - Status: Closing server
+Mon Jun  7 11:04:13 2021
+ - Status: Server ended
+Mon Jun  7 11:11:37 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:11:37 2021
+ - Status: Start node  2020 on port:  0
+Mon Jun  7 11:11:48 2021
+ - Status: Closing server
+Mon Jun  7 11:11:49 2021
+ - Status: Server ended
+Mon Jun  7 11:14:11 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:14:11 2021
+ - Status: Start node  0 on port:  2020
+Mon Jun  7 11:14:14 2021
+ - Status: Closing server
+Mon Jun  7 11:14:15 2021
+ - Status: Server ended
+Mon Jun  7 11:23:13 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:23:13 2021
+ - Status: Start node: 0 on port: 2020
+Mon Jun  7 11:23:15 2021
+ - Status: Closing server
+Mon Jun  7 11:23:16 2021
+ - Status: Server ended
+Mon Jun  7 11:25:59 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:25:59 2021
+ - Status: Start node: 0 on port: 2020
+Mon Jun  7 11:30:37 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:30:37 2021
+ - Status: Start node: 0 on port: 2020
+Mon Jun  7 11:31:12 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:31:12 2021
+ - Status: Start node: 0 on port: 2020
+Mon Jun  7 11:31:14 2021
+ - Status: Closing node
+Mon Jun  7 11:31:15 2021
+ - Status: Node ended
+Mon Jun  7 11:32:41 2021
+ - Status: Successfully read config file
+Mon Jun  7 11:32:41 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 11:32:44 2021
+ - Status: Closing node
+Mon Jun  7 11:32:45 2021
+ - Status: Node ended
+Mon Jun  7 13:42:47 2021
+ - Status: Successfully read config file
+Mon Jun  7 13:42:47 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 13:42:47 2021
+ - Status: Node ended
+Mon Jun  7 13:43:19 2021
+ - Status: Error while finding the semaphore
+Mon Jun  7 13:43:25 2021
+ - Status: Successfully read config file
+Mon Jun  7 13:43:25 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 13:43:25 2021
+ - Status: Node ended
+Mon Jun  7 13:44:14 2021
+ - Status: Successfully read config file
+Mon Jun  7 13:44:14 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 13:44:19 2021
+ - Status: Closing node
+Mon Jun  7 13:44:20 2021
+ - Status: Node ended
+Mon Jun  7 13:51:08 2021
+ - Status: Successfully read config file
+Mon Jun  7 13:51:08 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 13:53:25 2021
+ - Status: Error in the image received
+Mon Jun  7 13:54:42 2021
+ - Status: Closing node
+Mon Jun  7 13:54:43 2021
+ - Status: Node ended
+Mon Jun  7 13:58:16 2021
+ - Status: Successfully read config file
+Mon Jun  7 13:58:16 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 13:58:39 2021
+ - Status: Closing node
+Mon Jun  7 13:58:40 2021
+ - Status: Node ended
+Mon Jun  7 14:01:36 2021
+ - Status: Successfully read config file
+Mon Jun  7 14:01:36 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 14:01:55 2021
+ - Status: Error in the image received
+Mon Jun  7 14:02:05 2021
+ - Status: Closing node
+Mon Jun  7 14:02:06 2021
+ - Status: Node ended
+Mon Jun  7 14:11:25 2021
+ - Status: Successfully read config file
+Mon Jun  7 14:11:25 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 14:11:57 2021
+ - Status: Closing node
+Mon Jun  7 14:11:58 2021
+ - Status: Node ended
+Mon Jun  7 14:37:14 2021
+ - Status: Successfully read config file
+Mon Jun  7 14:37:14 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 14:37:19 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:44 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:46 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:47 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:48 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:48 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:49 2021
+ - Status: Error in the image received
+Mon Jun  7 14:37:49 2021
+ - Status: Error in the image received
+Mon Jun  7 14:38:09 2021
+ - Status: Closing node
+Mon Jun  7 14:38:10 2021
+ - Status: Node ended
+Mon Jun  7 14:43:30 2021
+ - Status: Successfully read config file
+Mon Jun  7 14:43:30 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 14:49:19 2021
+ - Status: Closing node
+Mon Jun  7 14:49:20 2021
+ - Status: Node ended
+Mon Jun  7 15:03:38 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:03:38 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:04:36 2021
+ - Status: Closing node
+Mon Jun  7 15:04:37 2021
+ - Status: Node ended
+Mon Jun  7 15:04:45 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:04:45 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:05:07 2021
+ - Status: Image received
+Mon Jun  7 15:05:50 2021
+ - Status: Closing node
+Mon Jun  7 15:05:51 2021
+ - Status: Node ended
+Mon Jun  7 15:06:14 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:06:14 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:06:16 2021
+ - Status: Image received
+Mon Jun  7 15:16:31 2021
+ - Status: Closing node
+Mon Jun  7 15:16:32 2021
+ - Status: Node ended
+Mon Jun  7 15:16:40 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:16:40 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:16:46 2021
+ - Status: Image received
+Mon Jun  7 15:17:23 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:17:23 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:18:50 2021
+ - Status: Image received
+Mon Jun  7 15:19:48 2021
+ - Status: Error while finding the semaphore
+Mon Jun  7 15:20:03 2021
+ - Status: Error while finding the semaphore
+Mon Jun  7 15:20:26 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:20:26 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:20:39 2021
+ - Status: Image received
+Mon Jun  7 15:21:14 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:21:14 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:21:17 2021
+ - Status: Image received
+Mon Jun  7 15:21:26 2021
+ - Status: Image received
+Mon Jun  7 15:21:29 2021
+ - Status: Closing node
+Mon Jun  7 15:21:30 2021
+ - Status: Node ended
+Mon Jun  7 15:24:46 2021
+ - Status: Successfully read config file
+Mon Jun  7 15:24:46 2021
+ - Status: Start node: 0 on port: 7070
+Mon Jun  7 15:24:51 2021
+ - Status: Image received
+Mon Jun  7 15:25:04 2021
+ - Status: Closing node
+Mon Jun  7 15:25:05 2021
+ - Status: Node ended
+Tue Jun  8 17:44:12 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:44:12 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:45:20 2021
+ - Status: Image received
+Tue Jun  8 17:47:53 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:47:53 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:47:56 2021
+ - Status: Image received
+Tue Jun  8 17:48:39 2021
+ - Status: Closing node
+Tue Jun  8 17:48:55 2021
+ - Status: Error while finding the semaphore
+Tue Jun  8 17:49:06 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:49:06 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:49:09 2021
+ - Status: Closing node
+Tue Jun  8 17:49:54 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:49:54 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:49:56 2021
+ - Status: Closing node
+Tue Jun  8 17:50:27 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:50:27 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:50:30 2021
+ - Status: Closing node
+Tue Jun  8 17:58:58 2021
+ - Status: Successfully read config file
+Tue Jun  8 17:58:58 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 17:59:09 2021
+ - Status: Closing node
+Tue Jun  8 18:00:19 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:00:19 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:00:25 2021
+ - Status: Closing node
+Tue Jun  8 18:00:26 2021
+ - Status: Node ended
+Tue Jun  8 18:00:59 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:00:59 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:01:07 2021
+ - Status: Image received
+Tue Jun  8 18:01:27 2021
+ - Status: Closing node
+Tue Jun  8 18:01:28 2021
+ - Status: Node ended
+Tue Jun  8 18:10:26 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:10:26 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:10:30 2021
+ - Status: Image received
+Tue Jun  8 18:11:01 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:11:01 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:11:11 2021
+ - Status: Image received
+Tue Jun  8 18:12:32 2021
+ - Status: Error while finding the semaphore
+Tue Jun  8 18:12:38 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:12:38 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:12:41 2021
+ - Status: Image received
+Tue Jun  8 18:12:46 2021
+ - Status: Closing node
+Tue Jun  8 18:12:47 2021
+ - Status: Node ended
+Tue Jun  8 18:16:08 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:16:08 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:16:11 2021
+ - Status: Image received
+Tue Jun  8 18:18:40 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:18:40 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:26:02 2021
+ - Status: Successfully read config file
+Tue Jun  8 18:26:02 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 18:26:09 2021
+ - Status: Image received
+Tue Jun  8 19:29:38 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:29:38 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:30:07 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:30:07 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:38:47 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:38:47 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:38:52 2021
+ - Status: Image received
+Tue Jun  8 19:41:16 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:41:16 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:41:20 2021
+ - Status: Image received
+Tue Jun  8 19:41:42 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:41:42 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:41:43 2021
+ - Status: Image received
+Tue Jun  8 19:42:19 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:42:19 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:42:23 2021
+ - Status: Image received
+Tue Jun  8 19:44:30 2021
+ - Status: Successfully read config file
+Tue Jun  8 19:44:30 2021
+ - Status: Start node: 0 on port: 7070
+Tue Jun  8 19:44:33 2021
+ - Status: Image received
+Tue Jun  8 19:45:27 2021
+ - Status: Closing node
+Tue Jun  8 19:45:28 2021
+ - Status: Node ended
