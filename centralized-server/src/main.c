@@ -12,7 +12,7 @@ int main() {
     queueInit(&imageList);
     createSemaphores();
     closeServer = 0;
-    startNodeConnectionHandler();
+    //startNodeConnectionHandler();
     startServer();
     closeSemaphores();    
 

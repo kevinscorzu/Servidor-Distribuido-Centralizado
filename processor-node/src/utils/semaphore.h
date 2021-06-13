@@ -5,14 +5,16 @@
 #include <stdio.h>
 #include <semaphore.h>
 #include <fcntl.h>
-#include "log.h"
 
-sem_t* sem;
+sem_t *semThreadMain;
+sem_t *semThread0;
+sem_t *semThread1;
+sem_t *semThread2;
 
 int createSemaphore();
 int closeSemaphore();
-int waitSemaphore();
-int postSemaphore();
+int waitSemaphore(int semaphore);
+int postSemaphore(int semaphore);
 int findSemaphore();
 
 #endif

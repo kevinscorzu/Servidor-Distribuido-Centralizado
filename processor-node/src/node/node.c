@@ -1,15 +1,5 @@
 #include "node.h"
 
-// GLOBAL VARIABLES
-pthread_t t0;
-pthread_t t1;
-pthread_t t2;
-
-#define SERVER_URL_PREFIX "http://localhost:2020/Api/Stop"
-
-char *image;
-int key;
-
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data);
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data);
 int stopNode(const struct _u_request *request, struct _u_response *response, void *user_data);
@@ -18,43 +8,41 @@ void funciondGabo(int key, char *image);
 
 int startNode() {
 
-    pthread_create(&t0,NULL,&toAnalize,NULL);
-    pthread_create(&t1,NULL,&toAnalize,NULL);
-    pthread_create(&t2,NULL,&toAnalize,NULL);
+    pthread_create(&t0, NULL, &toAnalize, (void*) (__intptr_t) 1);
+    pthread_create(&t1, NULL, &toAnalize, (void*) (__intptr_t) 2);
+    pthread_create(&t2, NULL, &toAnalize, (void*) (__intptr_t) 3);
+
+    pthread_detach(t0);
+    pthread_detach(t1);
+    pthread_detach(t2);
 
     struct _u_instance instance;
 
     if (ulfius_init_instance(&instance, port, NULL, NULL) != U_OK) {
-        writeToLog("Status: Error ulfius_init_instance, abort");
+        printf("Error ulfius_init_instance, abort\n");
         return 1;
     }
 
     ulfius_add_endpoint_by_val(&instance, "OPTIONS", NULL, "*", 0, &allowCORS, NULL);
-    ulfius_add_endpoint_by_val(&instance, "POST", "/Api/Analyze", NULL, 0, &receiveImage, NULL);
-    ulfius_add_endpoint_by_val(&instance, "GET", "/Api/Stop", NULL, 0, &stopNode, NULL);
+    ulfius_add_endpoint_by_val(&instance, "POST", "/Node/Analyze", NULL, 0, &receiveImage, NULL);
+    ulfius_add_endpoint_by_val(&instance, "GET", "/Node/Stop", NULL, 0, &stopNode, NULL);
 
     if (ulfius_start_framework(&instance) == U_OK) {
         printf("Start node %d on port: %d\n",id,instance.port);
-        writeToLogInt("Status: Start node:","on port:",id,instance.port);
 
         while (1) {
-            waitSemaphore();
+            waitSemaphore(0);
 
             if (closeNode == 1) {
                 sleep(1);
                 break;
             }
-
-            printf("There are currently %d elements on the queue\n", imageList.count);
-            postSemaphore();
-            usleep(500000);
         }
     } else {
-        writeToLog("Status: Error starting node");
+        printf("Error starting node\n");
     }
 
     printf("Node ended\n");
-    writeToLog("Status: Node ended");
 
     ulfius_stop_framework(&instance);
     ulfius_clean_instance(&instance);
@@ -74,7 +62,7 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
     
     if (jsonImage != NULL) {
-        writeToLog("Status: Image received");
+        printf("Image received\n");
 
        
         // Get image content
@@ -88,10 +76,10 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
         cypher = json_object_get(jsonImage, "clave");
         key = json_integer_value(cypher);
     
-        postSemaphore();
+        //postSemaphore();
 
     } else {
-        writeToLog("Status: Error in the image received");
+        printf("Error in the image received\n");
     }
 
     //char idNode[20];
@@ -101,21 +89,28 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
 }
 
 int stopNode(const struct _u_request *request, struct _u_response *response, void *user_data) {
-    writeToLog("Status: Closing node");
+    printf("Closing node\n");
     ulfius_set_string_body_response(response, 200, "Ok");
     closeNode = 1;
-    postSemaphore();
-    postSemaphore();
+    postSemaphore(0);
+    postSemaphore(1);
+    postSemaphore(2);
+    postSemaphore(3);
     return U_CALLBACK_CONTINUE;
 }
 
-void *toAnalize(){
-    printf("LLEGOOO");
+void *toAnalize(void *arg){
+    int id = (int) (__intptr_t) arg;
+
     int keyLocal = 0;
     char *imageLocal;
 
     while(1){
-        waitSemaphore();
+        waitSemaphore(id);
+        if (closeNode == 1) {
+            break;
+        }
+
         imageLocal = image;
         keyLocal = key;
         funciondGabo(keyLocal,imageLocal);
@@ -124,12 +119,11 @@ void *toAnalize(){
         // initialize request
 
     }
-    printf("LLEGO");
 }
 
 
 void funciondGabo(int key, char *image){
-    printf("COMPILA...");
+    printf("COMPILA...\n");
 
     char *string_body = "param1=one&param2=two";
     json_t *json_body = json_object();

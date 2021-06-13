@@ -5,7 +5,7 @@
 int main() {
     findSemaphore();
     closeSemaphore();
-    printf("Successfully closed the semaphore");
+    printf("Successfully closed the semaphore\n");
 
     return 0;
 }

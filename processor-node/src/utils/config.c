@@ -7,19 +7,19 @@ int readConfigFile() {
     config_init(&cfg);
 
     if(!config_read_file(&cfg, "config.conf")) {
-        writeToLog("Status: Error while opening config file");
+        printf("Error while opening config file\n");
 
         config_destroy(&cfg);
         exit(EXIT_FAILURE);
     }
 
     if(config_lookup_int(&cfg, "port", &port) && config_lookup_int(&cfg, "id", &id)) {
-        writeToLog("Status: Successfully read config file");
+        printf("Successfully read config file\n");
         config_destroy(&cfg);
         return 0;
     }
     else {
-        writeToLog("Status: Error while reading config file");
+        printf("Error while reading config file\n");
         config_destroy(&cfg);
         exit(EXIT_FAILURE);
     }
