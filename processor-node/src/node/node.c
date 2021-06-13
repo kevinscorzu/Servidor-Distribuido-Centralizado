@@ -5,6 +5,8 @@ pthread_t t0;
 pthread_t t1;
 pthread_t t2;
 
+#define SERVER_URL_PREFIX "http://localhost:2020/Api/Stop"
+
 char *image;
 int key;
 
@@ -109,12 +111,12 @@ int stopNode(const struct _u_request *request, struct _u_response *response, voi
 
 void *toAnalize(){
     printf("LLEGOOO");
-    int keyLocal;
-    char imageLocal[100] = "";
+    int keyLocal = 0;
+    char *imageLocal;
 
     while(1){
         waitSemaphore();
-        strcat(imageLocal,image);
+        imageLocal = image;
         keyLocal = key;
         funciondGabo(keyLocal,imageLocal);
 
@@ -128,4 +130,35 @@ void *toAnalize(){
 
 void funciondGabo(int key, char *image){
     printf("COMPILA...");
+
+    char *string_body = "param1=one&param2=two";
+    json_t *json_body = json_object();
+    int res;
+    struct _u_response response;
+    struct _u_request request;
+
+    ulfius_init_request(&request);
+    ulfius_init_response(&response);
+
+    json_object_set_new(json_body, "param1", json_string("Node"));
+    json_object_set_new(json_body, "param2", json_string("one"));
+    
+    
+    ulfius_set_request_properties(&request,
+                                U_OPT_HTTP_VERB, "GET",
+                                U_OPT_HTTP_URL, SERVER_URL_PREFIX,
+                                U_OPT_TIMEOUT, 20,
+                                U_OPT_BINARY_BODY, string_body, 22,
+                                U_OPT_NONE); // Required to close the parameters list
+
+    ulfius_init_response(&response);
+    res = ulfius_send_http_request(&request, &response);
+    if (res == U_OK) {
+        printf("[INFO] Request send made\n");
+    } else {
+        printf("Error in http request: %d\n", res);
+    }
+    ulfius_clean_response(&response);
+        
+    printf("[INFO] Notification send\n");
 }
