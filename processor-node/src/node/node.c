@@ -108,13 +108,13 @@ int stopNode(const struct _u_request *request, struct _u_response *response, voi
 }
 
 void *toAnalize(){
-    /*
+    printf("LLEGOOO");
     int keyLocal;
-    char *imageLocal;
+    char imageLocal[100] = "";
 
     while(1){
         waitSemaphore();
-        strcpy(imageLocal,image);
+        strcat(imageLocal,image);
         keyLocal = key;
         funciondGabo(keyLocal,imageLocal);
 
@@ -122,7 +122,6 @@ void *toAnalize(){
         // initialize request
 
     }
-*/
     printf("LLEGO");
 }
 
