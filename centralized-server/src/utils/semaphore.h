@@ -7,12 +7,13 @@
 #include <fcntl.h>
 #include "log.h"
 
-sem_t* sem;
+sem_t *semImageQueue;
+sem_t *semImageSend;
 
-int createSemaphore();
-int closeSemaphore();
-int waitSemaphore();
-int postSemaphore();
-int findSemaphore();
+int createSemaphores();
+int closeSemaphores();
+int waitSemaphore(int semaphore);
+int postSemaphore(int semaphore);
+int findSemaphores();
 
 #endif

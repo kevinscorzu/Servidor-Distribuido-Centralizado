@@ -3,9 +3,9 @@
 #include "utils/semaphore.h"
 
 int main() {
-    findSemaphore();
-    closeSemaphore();
-    printf("Successfully closed the semaphore");
+    findSemaphores();
+    closeSemaphores();
+    printf("Successfully closed the semaphores\n");
 
     return 0;
 }

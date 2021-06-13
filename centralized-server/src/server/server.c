@@ -2,6 +2,7 @@
 
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data);
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data);
+int receiveConfirmation(const struct _u_request *request, struct _u_response *response, void *user_data);
 int stopServer(const struct _u_request *request, struct _u_response *response, void *user_data);
 
 int startServer() {
@@ -14,13 +15,14 @@ int startServer() {
 
     ulfius_add_endpoint_by_val(&instance, "OPTIONS", NULL, "*", 0, &allowCORS, NULL);
     ulfius_add_endpoint_by_val(&instance, "POST", "/Api/Analyze", NULL, 0, &receiveImage, NULL);
+    ulfius_add_endpoint_by_val(&instance, "POST", "/Api/Confirm", NULL, 0, &receiveConfirmation, NULL);
     ulfius_add_endpoint_by_val(&instance, "GET", "/Api/Stop", NULL, 0, &stopServer, NULL);
 
     if (ulfius_start_framework(&instance) == U_OK) {
         printf("Start server on port: %d\n", instance.port);
         writeToLogInt("Status: Start server on port: ", instance.port);
         while (1) {
-            waitSemaphore();
+            waitSemaphore(0);
 
             if (closeServer == 1) {
                 sleep(1);
@@ -28,7 +30,7 @@ int startServer() {
             }
 
             printf("There are currently %d elements on the queue\n", imageList.count);
-            postSemaphore();
+            postSemaphore(0);
             usleep(500000);
         }
     } else {
@@ -57,8 +59,27 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
 
     if (jsonImage != NULL) {
         queueAddItem(&imageList, jsonImage);
-        postSemaphore();
+        postSemaphore(0);
         writeToLog("Status: Image received");
+    } else {
+        writeToLog("Status: Error in the image received");
+    }
+
+    ulfius_set_string_body_response(response, 200, "Ok");
+    return U_CALLBACK_CONTINUE;
+}
+
+int receiveConfirmation(const struct _u_request *request, struct _u_response *response, void *user_data) {
+    json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
+
+    if (jsonImage != NULL) {
+        json_t *idJson = json_object_get(jsonImage, "id");
+        int id = json_integer_value(idJson);
+        updateNodeImages(id);
+        free(jsonImage);
+        free(idJson);
+        postSemaphore(1);
+        writeToLog("Status: Confirmation received");
     } else {
         writeToLog("Status: Error in the image received");
     }
@@ -71,7 +92,7 @@ int stopServer(const struct _u_request *request, struct _u_response *response, v
     writeToLog("Status: Closing server");
     ulfius_set_string_body_response(response, 200, "Ok");
     closeServer = 1;
-    postSemaphore();
-    postSemaphore();
+    postSemaphore(0);
+    postSemaphore(0);
     return U_CALLBACK_CONTINUE;
 }

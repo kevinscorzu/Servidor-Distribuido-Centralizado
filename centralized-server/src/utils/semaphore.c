@@ -1,58 +1,102 @@
 #include "semaphore.h"
 
-int createSemaphore() {
+int createSemaphores() {
 
-    sem = sem_open("sem", O_CREAT, 0644, 0);
+    semImageQueue = sem_open("semImageQueue", O_CREAT, 0644, 0);
 
-    if (sem == SEM_FAILED) {
-        writeToLog("Status: Error while creating the semaphore");
+    if (semImageQueue == SEM_FAILED) {
+        writeToLog("Status: Error while creating the Image Queue semaphore");
+        exit(EXIT_FAILURE);
+    }
+
+    semImageSend = sem_open("semImageSend", O_CREAT, 0644, 6);
+
+    if (semImageSend == SEM_FAILED) {
+        writeToLog("Status: Error while creating the Image Send semaphore");
         exit(EXIT_FAILURE);
     }
 
     return 0;
 }
 
-int closeSemaphore() {
+int closeSemaphores() {
 
-    if (sem_close(sem) != 0) {
-        writeToLog("Status: Error while closing the semaphore");
+    if (sem_close(semImageQueue) != 0) {
+        writeToLog("Status: Error while closing the Image Queue semaphore");
         exit(EXIT_FAILURE);
     }
 
-    if (sem_unlink("sem") < 0) {
-        writeToLog("Status: Error while unlinking the semaphore");
+    if (sem_unlink("semImageQueue") < 0) {
+        writeToLog("Status: Error while unlinking the Image Queue semaphore");
+        exit(EXIT_FAILURE);
+    }
+
+    if (sem_close(semImageSend) != 0) {
+        writeToLog("Status: Error while closing the Image Send semaphore");
+        exit(EXIT_FAILURE);
+    }
+
+    if (sem_unlink("semImageSend") < 0) {
+        writeToLog("Status: Error while unlinking the Image Send semaphore");
         exit(EXIT_FAILURE);
     }
 
     return 0;
 }
 
-int waitSemaphore() {
+int waitSemaphore(int semaphore) {
 
-    if (sem_wait(sem) < 0) {
-        writeToLog("Status: Error while waiting for the semaphore");
-        exit(EXIT_FAILURE);
+    switch (semaphore) {
+    case 0:
+        if (sem_wait(semImageQueue) < 0) {
+            writeToLog("Status: Error while waiting for the Image Queue semaphore");
+            exit(EXIT_FAILURE);
+        }
+        break;
+    case 1:
+        if (sem_wait(semImageSend) < 0) {
+            writeToLog("Status: Error while waiting for the Image Send semaphore");
+            exit(EXIT_FAILURE);
+        }
+        break;
     }
 
     return 0;
 }
 
-int postSemaphore() {
+int postSemaphore(int semaphore) {
     
-    if (sem_post(sem) < 0) {
-        writeToLog("Status: Error while posting the semaphore");
-        exit(EXIT_FAILURE);
+    switch (semaphore) {
+    case 0:
+        if (sem_post(semImageQueue) < 0) {
+            writeToLog("Status: Error while posting the Image Queue semaphore");
+            exit(EXIT_FAILURE);
+        }
+        break;
+    case 1:
+        if (sem_post(semImageSend) < 0) {
+            writeToLog("Status: Error while posting the Image Send semaphore");
+            exit(EXIT_FAILURE);
+        }
+        break;
     }
-
+    
     return 0;
 }
 
-int findSemaphore() {
+int findSemaphores() {
     
-    sem = sem_open("sem", 0);
+    semImageQueue = sem_open("semImageQueue", 0);
 
-    if (sem == SEM_FAILED) {
-        writeToLog("Status: Error while finding the semaphore");
+    if (semImageQueue == SEM_FAILED) {
+        writeToLog("Status: Error while finding the Image Queue semaphore");
+        exit(EXIT_FAILURE);
+    }
+
+    semImageSend = sem_open("semImageSend", 0);
+
+    if (semImageSend == SEM_FAILED) {
+        writeToLog("Status: Error while finding the Image Send semaphore");
         exit(EXIT_FAILURE);
     }
 

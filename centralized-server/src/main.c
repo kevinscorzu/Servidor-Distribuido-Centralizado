@@ -4,14 +4,17 @@
 #include "utils/config.h"
 #include "utils/queue.h"
 #include "utils/semaphore.h"
+#include "server/server.h"
+#include "server/connect.h"
 
 int main() {
     readConfigFile();
     queueInit(&imageList);
-    createSemaphore();
+    createSemaphores();
     closeServer = 0;
+    startNodeConnectionHandler();
     startServer();
-    closeSemaphore();
+    closeSemaphores();    
 
     return 0;
 }

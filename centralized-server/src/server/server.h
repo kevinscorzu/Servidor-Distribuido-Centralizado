@@ -7,6 +7,7 @@
 #include "../utils/log.h"
 #include "../utils/queue.h"
 #include "../utils/semaphore.h"
+#include "connect.h"
 
 int port;
 int closeServer;
