@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <pthread.h>
-#include <curl/curl.h>
 #include <string.h>
 #include <jansson.h>
 #include "../utils/log.h"

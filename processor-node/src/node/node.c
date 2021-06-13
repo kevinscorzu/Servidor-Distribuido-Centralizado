@@ -3,7 +3,7 @@
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data);
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data);
 int stopNode(const struct _u_request *request, struct _u_response *response, void *user_data);
-void *toAnalize();
+void *toAnalize(void *arg);
 void funciondGabo(int key, char *image);
 
 int startNode() {
@@ -99,7 +99,7 @@ int stopNode(const struct _u_request *request, struct _u_response *response, voi
     return U_CALLBACK_CONTINUE;
 }
 
-void *toAnalize(void *arg){
+void *toAnalize(void *arg) {
     int id = (int) (__intptr_t) arg;
 
     int keyLocal = 0;
