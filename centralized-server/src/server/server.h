@@ -9,6 +9,8 @@
 #include "../utils/semaphore.h"
 #include "connect.h"
 
+pthread_mutex_t lock;
+
 int port;
 int closeServer;
 

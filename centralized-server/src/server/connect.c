@@ -117,9 +117,14 @@ void *sendImages(void *arg) {
         }
         
         image = (json_t*) queueGetFirstItem(&imageList);
+
+        pthread_mutex_lock(&lock);
+
         node = getNode();
         ip = getIp(node);
         thread = getThread(node);
+
+        pthread_mutex_unlock(&lock);
 
         json_object_set_new(image, "threadId", json_integer(thread));
 

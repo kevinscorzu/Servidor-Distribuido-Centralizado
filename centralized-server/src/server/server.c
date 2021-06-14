@@ -6,6 +6,12 @@ int receiveConfirmation(const struct _u_request *request, struct _u_response *re
 int stopServer(const struct _u_request *request, struct _u_response *response, void *user_data);
 
 int startServer() {
+
+    if (pthread_mutex_init(&lock, NULL) != 0) {
+        writeToLog("Status: Failed to initialize mutex");
+        return 1;
+    }
+
     struct _u_instance instance;
 
     if (ulfius_init_instance(&instance, port, NULL, NULL) != U_OK) {
@@ -44,6 +50,8 @@ int startServer() {
     ulfius_stop_framework(&instance);
     ulfius_clean_instance(&instance);
 
+    pthread_mutex_destroy(&lock);
+
     return 0;
 }
 
@@ -80,7 +88,11 @@ int receiveConfirmation(const struct _u_request *request, struct _u_response *re
         json_t *idThreadJson = json_object_get(jsonImage, "thread");
         int idThread = json_integer_value(idThreadJson);
 
+        pthread_mutex_lock(&lock);
+
         updateNodeImages(idNode, idThread);
+
+        pthread_mutex_unlock(&lock);
 
         json_decref(jsonImage);
         json_decref(idNodeJson);

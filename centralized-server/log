@@ -234,3 +234,41 @@ Sun Jun 13 22:06:26 2021
  - Status: Error while finding the Image Queue semaphore
 Sun Jun 13 22:06:27 2021
  - Status: Error while finding the Image Queue semaphore
+Mon Jun 14 09:48:55 2021
+ - Status: Successfully read config file
+Mon Jun 14 09:48:55 2021
+ - Status: Successfully started the connection handler thread
+Mon Jun 14 09:48:55 2021
+ - Status: Start server on port:  2020
+Mon Jun 14 09:49:56 2021
+ - Status: Closing server
+Mon Jun 14 09:50:17 2021
+ - Status: Failed to stop node  0
+Mon Jun 14 09:50:17 2021
+ - Status: Closing server
+Mon Jun 14 09:50:20 2021
+ - Status: Failed to stop node  1
+Mon Jun 14 09:50:23 2021
+ - Status: Server ended
+Mon Jun 14 09:50:59 2021
+ - Status: Successfully read config file
+Mon Jun 14 09:50:59 2021
+ - Status: Successfully started the connection handler thread
+Mon Jun 14 09:50:59 2021
+ - Status: Start server on port:  2020
+Mon Jun 14 09:51:01 2021
+ - Status: Closing server
+Mon Jun 14 09:51:05 2021
+ - Status: Closing server
+Mon Jun 14 09:53:53 2021
+ - Status: Successfully read config file
+Mon Jun 14 09:53:53 2021
+ - Status: Successfully started the connection handler thread
+Mon Jun 14 09:53:53 2021
+ - Status: Start server on port:  2020
+Mon Jun 14 09:54:07 2021
+ - Status: Successfully read config file
+Mon Jun 14 09:54:07 2021
+ - Status: Successfully started the connection handler thread
+Mon Jun 14 09:54:07 2021
+ - Status: Start server on port:  2020
