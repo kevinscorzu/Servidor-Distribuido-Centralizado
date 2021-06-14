@@ -60,23 +60,42 @@ int allowCORS(const struct _u_request *request, struct _u_response *response, vo
 
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data) {
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
-    
+
     if (jsonImage != NULL) {
         printf("Image received\n");
 
-       
+        // Get id
+        json_auto_t * idThread = NULL;
+        idThread = json_object_get(jsonImage, "id");
+        id = json_integer_value(idThread);
+
         // Get image content
         json_auto_t * imgB64 = NULL;
         imgB64 = json_object_get(jsonImage, "image");
         const char * img = json_string_value(imgB64);
-        image = strdup(img);
+        //image = strdup(img);
 
         // Get token 
         json_auto_t * cypher = NULL;
         cypher = json_object_get(jsonImage, "clave");
-        key = json_integer_value(cypher);
-    
-        //postSemaphore();
+        //key = json_integer_value(cypher);
+
+        if(id == 0){
+            image0 = strdup(img);
+            key0 = json_integer_value(cypher);
+        }
+
+        else if(id == 1){
+            image1 = strdup(img);
+            key1 = json_integer_value(cypher);
+        }
+
+        else if(id == 2){
+            image2 = strdup(img);
+            key2 = json_integer_value(cypher);
+        }
+        
+        postSemaphore(id);
 
     } else {
         printf("Error in the image received\n");
@@ -111,9 +130,26 @@ void *toAnalize(void *arg) {
             break;
         }
 
-        imageLocal = image;
-        keyLocal = key;
-        funciondGabo(keyLocal,imageLocal);
+        if(id == 0){
+            imageLocal = image0;
+            keyLocal = key0;
+        }
+
+        else if(id == 1){
+            imageLocal = image1;
+            keyLocal = key1;
+        }
+
+        else if(id == 2){
+            imageLocal = image2;
+            keyLocal = key2;
+        }
+
+        printf("%d\n",id);
+
+        //imageLocal = image;
+        //keyLocal = key;
+        //funciondGabo(keyLocal,imageLocal);
 
         // HAGO POST A KEVIN
         // initialize request
