@@ -113,7 +113,6 @@ void *sendImages(void *arg) {
         ulfius_set_request_properties(&request,
                                       U_OPT_HTTP_VERB, "POST",
                                       U_OPT_HTTP_URL, ip,
-                                      U_OPT_TIMEOUT, 20,
                                       U_OPT_JSON_BODY, image,
                                       U_OPT_NONE);
 
@@ -181,6 +180,7 @@ int getThread(int node) {
         for (int i = 0; i < 3; i++) {
             if (currentNode1Images[i] == 0) {
                 currentNode1Images[i] = 1;
+                i++;
                 return i;
             }
         }
@@ -189,6 +189,7 @@ int getThread(int node) {
         for (int i = 0; i < 3; i++) {
             if (currentNode2Images[i] == 0) {
                 currentNode2Images[i] = 1;
+                i++;
                 return i;
             }
         }

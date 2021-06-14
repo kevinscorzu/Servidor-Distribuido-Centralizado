@@ -16,6 +16,10 @@ pthread_t t0;
 pthread_t t1;
 pthread_t t2;
 
+char *serverIp;
+
+char *serverLink;
+
 char *image0;
 int key0;
 

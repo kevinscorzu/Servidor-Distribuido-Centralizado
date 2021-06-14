@@ -8,10 +8,10 @@
 #include "server/connect.h"
 
 int main() {
-    //readConfigFile();
-    //queueInit(&imageList);
-    //createSemaphores();
-    //closeServer = 0;
+    readConfigFile();
+    queueInit(&imageList);
+    createSemaphores();
+    closeServer = 0;
     startNodeConnectionHandler();
     startServer();
     closeSemaphores();    

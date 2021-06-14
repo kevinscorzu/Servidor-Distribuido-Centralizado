@@ -1,12 +1,16 @@
 #include "node.h"
 
+void makeIp();
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data);
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data);
 int stopNode(const struct _u_request *request, struct _u_response *response, void *user_data);
 void *toAnalize(void *arg);
 void funciondGabo(int key, char *image);
+void confirmImageDone(int nodeId, int threadId);
 
 int startNode() {
+
+    makeIp();
 
     pthread_create(&t0, NULL, &toAnalize, (void*) (__intptr_t) 1);
     pthread_create(&t1, NULL, &toAnalize, (void*) (__intptr_t) 2);
@@ -50,6 +54,21 @@ int startNode() {
     return 0;
 }
 
+void makeIp() {
+
+    char *firstPart = "http://";
+    char *secondPart = "/Api/Confirm";
+
+    serverLink = malloc(sizeof(firstPart) + sizeof(serverIp) + sizeof(secondPart) + 1);
+
+    strcpy(serverLink, firstPart);
+    strcat(serverLink, serverIp);
+    strcat(serverLink, secondPart);
+
+    free(serverIp);
+
+}
+
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data) {
     u_map_put(response->map_header, "Access-Control-Allow-Origin", "*");
     u_map_put(response->map_header, "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -66,43 +85,44 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
 
         // Get id
         json_auto_t * idThread = NULL;
-        idThread = json_object_get(jsonImage, "id");
-        id = json_integer_value(idThread);
+        idThread = json_object_get(jsonImage, "threadId");
+        int tid = json_integer_value(idThread);
 
         // Get image content
         json_auto_t * imgB64 = NULL;
         imgB64 = json_object_get(jsonImage, "image");
         const char * img = json_string_value(imgB64);
-        //image = strdup(img);
 
         // Get token 
         json_auto_t * cypher = NULL;
-        cypher = json_object_get(jsonImage, "clave");
-        //key = json_integer_value(cypher);
+        cypher = json_object_get(jsonImage, "key");
 
-        if(id == 0){
+        switch (tid) {
+        case 1:
             image0 = strdup(img);
             key0 = json_integer_value(cypher);
-        }
-
-        else if(id == 1){
+            break;
+        case 2:
             image1 = strdup(img);
             key1 = json_integer_value(cypher);
-        }
-
-        else if(id == 2){
+            break;
+        case 3:
             image2 = strdup(img);
             key2 = json_integer_value(cypher);
+            break;
         }
         
-        postSemaphore(id);
+        json_decref(jsonImage);
+        json_decref(idThread);
+        json_decref(imgB64);
+        json_decref(cypher);
+
+        postSemaphore(tid);
 
     } else {
         printf("Error in the image received\n");
     }
 
-    //char idNode[20];
-    //sprintf(idNode, "%d", id);
     ulfius_set_string_body_response(response, 200, "Ok");
     return U_CALLBACK_CONTINUE;
 }
@@ -119,76 +139,69 @@ int stopNode(const struct _u_request *request, struct _u_response *response, voi
 }
 
 void *toAnalize(void *arg) {
-    int id = (int) (__intptr_t) arg;
+    int tid = (int) (__intptr_t) arg;
 
     int keyLocal = 0;
     char *imageLocal;
 
     while(1){
-        waitSemaphore(id);
+        waitSemaphore(tid);
         if (closeNode == 1) {
             break;
         }
 
-        if(id == 0){
+        switch (tid) {
+        case 1:
             imageLocal = image0;
             keyLocal = key0;
-        }
-
-        else if(id == 1){
+            break;
+        case 2:
             imageLocal = image1;
             keyLocal = key1;
-        }
-
-        else if(id == 2){
+            break;
+        case 3:
             imageLocal = image2;
             keyLocal = key2;
+            break;
         }
 
-        printf("%d\n",id);
-
-        //imageLocal = image;
-        //keyLocal = key;
         //funciondGabo(keyLocal,imageLocal);
 
-        // HAGO POST A KEVIN
-        // initialize request
-
+        confirmImageDone(id, tid);
     }
 }
 
 
-void funciondGabo(int key, char *image){
-    printf("COMPILA...\n");
-
-    char *string_body = "param1=one&param2=two";
-    json_t *json_body = json_object();
-    int res;
+void confirmImageDone(int nodeId, int threadId) {
     struct _u_response response;
     struct _u_request request;
 
+    json_t *confirmJson = json_object();
+    int res;
+
+    json_object_set_new(confirmJson, "node", json_integer(nodeId));
+    json_object_set_new(confirmJson, "thread", json_integer(threadId));
+
     ulfius_init_request(&request);
-    ulfius_init_response(&response);
 
-    json_object_set_new(json_body, "param1", json_string("Node"));
-    json_object_set_new(json_body, "param2", json_string("one"));
-    
-    
     ulfius_set_request_properties(&request,
-                                U_OPT_HTTP_VERB, "GET",
-                                U_OPT_HTTP_URL, SERVER_URL_PREFIX,
-                                U_OPT_TIMEOUT, 20,
-                                U_OPT_BINARY_BODY, string_body, 22,
-                                U_OPT_NONE); // Required to close the parameters list
+                                  U_OPT_HTTP_VERB, "POST",
+                                  U_OPT_HTTP_URL, serverLink,
+                                  U_OPT_JSON_BODY, confirmJson,
+                                  U_OPT_NONE);
 
     ulfius_init_response(&response);
+
     res = ulfius_send_http_request(&request, &response);
     if (res == U_OK) {
-        printf("[INFO] Request send made\n");
-    } else {
-        printf("Error in http request: %d\n", res);
+        printf("Sent confirmation to server\n");
     }
+    else {
+        printf("Failed to send confirmation to server\n");
+    }
+
     ulfius_clean_response(&response);
-        
-    printf("[INFO] Notification send\n");
+    ulfius_clean_request(&request);
+
+    json_decref(confirmJson);
 }
