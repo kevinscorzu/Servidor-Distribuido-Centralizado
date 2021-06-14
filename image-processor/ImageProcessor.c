@@ -12,7 +12,7 @@
 
 int main(void) {
     int width, height, channels;
-    unsigned char *img = stbi_load("res.jpg", &width, &height, &channels, 0);
+    unsigned char *img = stbi_load("10-10.jpg", &width, &height, &channels, 0);
 
     if(img == NULL) {
         printf("Error in loading the image\n");
@@ -22,7 +22,7 @@ int main(void) {
 
     int img_size = width * height * channels;
     
-    int key = 125;
+    int key = 10;
 
     unsigned char imgResult[img_size];
 
@@ -35,7 +35,7 @@ int main(void) {
         begin++;
     }
 
-    stbi_write_jpg("res1.jpg", width, height, channels, imgResult, 100);
+    stbi_write_jpg("10-10-10.jpg", width, height, channels, imgResult, 100);
 
     return 0;
 

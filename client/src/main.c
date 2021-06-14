@@ -21,7 +21,6 @@ int main(int argc, char* argv[]) {
     int closeServer = 0;
 
     strcpy(imageName, "");
-    strcpy(imagePath, "images/");
     strcpy(trueImagePath, "images/");
 
     for (int i = 0; i < argc; i++) {
@@ -85,6 +84,7 @@ int main(int argc, char* argv[]) {
 
         printf("Sending image number %d\n", i);
         sprintf(iChar, "%d", i);
+        strcpy(imagePath, "images/");
         strcat(imagePath, iChar);
         strcat(imagePath, "-");
         strcat(imagePath, imageName);
