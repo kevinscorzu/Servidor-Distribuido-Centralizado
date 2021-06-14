@@ -11,14 +11,19 @@
 #include "../utils/queue.h"
 #include "server.h"
 
-struct _u_request request;
-struct _u_response response;
+pthread_t connectionThread;
+
+struct _u_request requestConnection;
+struct _u_response responseConnection;
 
 char *node1Ip;
 char *node2Ip;
 
-char *node1Link;
-char *node2Link;
+char *node1ImageLink;
+char *node2ImageLink;
+
+char *node1CloseLink;
+char *node2CloseLink;
 
 int currentNode1Images[3];
 int currentNode1ImagesCount;

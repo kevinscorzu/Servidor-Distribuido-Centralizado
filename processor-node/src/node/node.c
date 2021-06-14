@@ -10,16 +10,6 @@ void confirmImageDone(int nodeId, int threadId);
 
 int startNode() {
 
-    makeIp();
-
-    pthread_create(&t0, NULL, &toAnalize, (void*) (__intptr_t) 1);
-    pthread_create(&t1, NULL, &toAnalize, (void*) (__intptr_t) 2);
-    pthread_create(&t2, NULL, &toAnalize, (void*) (__intptr_t) 3);
-
-    pthread_detach(t0);
-    pthread_detach(t1);
-    pthread_detach(t2);
-
     struct _u_instance instance;
 
     if (ulfius_init_instance(&instance, port, NULL, NULL) != U_OK) {
@@ -38,6 +28,9 @@ int startNode() {
             waitSemaphore(0);
 
             if (closeNode == 1) {
+                pthread_join(t0, NULL);
+                pthread_join(t1, NULL);
+                pthread_join(t2, NULL);
                 sleep(1);
                 break;
             }
@@ -52,21 +45,6 @@ int startNode() {
     ulfius_clean_instance(&instance);
 
     return 0;
-}
-
-void makeIp() {
-
-    char *firstPart = "http://";
-    char *secondPart = "/Api/Confirm";
-
-    serverLink = malloc(sizeof(firstPart) + sizeof(serverIp) + sizeof(secondPart) + 1);
-
-    strcpy(serverLink, firstPart);
-    strcat(serverLink, serverIp);
-    strcat(serverLink, secondPart);
-
-    free(serverIp);
-
 }
 
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data) {
@@ -93,7 +71,7 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
         imgB64 = json_object_get(jsonImage, "image");
         const char * img = json_string_value(imgB64);
 
-        // Get token 
+        // Get key 
         json_auto_t * cypher = NULL;
         cypher = json_object_get(jsonImage, "key");
 
@@ -136,72 +114,4 @@ int stopNode(const struct _u_request *request, struct _u_response *response, voi
     postSemaphore(2);
     postSemaphore(3);
     return U_CALLBACK_CONTINUE;
-}
-
-void *toAnalize(void *arg) {
-    int tid = (int) (__intptr_t) arg;
-
-    int keyLocal = 0;
-    char *imageLocal;
-
-    while(1){
-        waitSemaphore(tid);
-        if (closeNode == 1) {
-            break;
-        }
-
-        switch (tid) {
-        case 1:
-            imageLocal = image0;
-            keyLocal = key0;
-            break;
-        case 2:
-            imageLocal = image1;
-            keyLocal = key1;
-            break;
-        case 3:
-            imageLocal = image2;
-            keyLocal = key2;
-            break;
-        }
-
-        //funciondGabo(keyLocal,imageLocal);
-
-        confirmImageDone(id, tid);
-    }
-}
-
-
-void confirmImageDone(int nodeId, int threadId) {
-    struct _u_response response;
-    struct _u_request request;
-
-    json_t *confirmJson = json_object();
-    int res;
-
-    json_object_set_new(confirmJson, "node", json_integer(nodeId));
-    json_object_set_new(confirmJson, "thread", json_integer(threadId));
-
-    ulfius_init_request(&request);
-
-    ulfius_set_request_properties(&request,
-                                  U_OPT_HTTP_VERB, "POST",
-                                  U_OPT_HTTP_URL, serverLink,
-                                  U_OPT_JSON_BODY, confirmJson,
-                                  U_OPT_NONE);
-
-    ulfius_init_response(&response);
-
-    res = ulfius_send_http_request(&request, &response);
-    if (res == U_OK) {
-        printf("Sent confirmation to server\n");
-    }
-    else {
-        printf("Failed to send confirmation to server\n");
-    }
-
-    ulfius_clean_response(&response);
-    ulfius_clean_request(&request);
-
-    json_decref(confirmJson);
 }

@@ -5,6 +5,7 @@ void *sendImages(void *arg);
 int getNode();
 char* getIp(int node);
 int getThread(int node);
+int stopNode(char* ip, int node);
 
 int startNodeConnectionHandler() {
 
@@ -17,12 +18,9 @@ int startNodeConnectionHandler() {
     currentNode2ImagesCount = 0;
     lastNodeSent = 1;
 
-    ulfius_init_request(&request);
     makeIps();
 
-    pthread_t connectionThread;
     pthread_create(&connectionThread, NULL, sendImages, NULL);
-    pthread_detach(connectionThread);
 
     writeToLog("Status: Successfully started the connection handler thread");
 
@@ -68,18 +66,30 @@ int updateNodeImages(int id, int thread) {
 void makeIps() {
 
     char* firstPart = "http://";
-    char* secondPart = "/Node/Analyze";
+    char* secondPartImage = "/Node/Analyze";
+    char* secondPartStop = "/Node/Stop";
 
-    node1Link = malloc(sizeof(firstPart) + sizeof(node1Ip) + sizeof(secondPart) + 1);
-    node2Link = malloc(sizeof(firstPart) + sizeof(node2Ip) + sizeof(secondPart) + 1);
+    node1ImageLink = malloc(sizeof(firstPart) + sizeof(node1Ip) + sizeof(secondPartImage) + 1);
+    node2ImageLink = malloc(sizeof(firstPart) + sizeof(node2Ip) + sizeof(secondPartImage) + 1);
 
-    strcpy(node1Link, firstPart);
-    strcat(node1Link, node1Ip);
-    strcat(node1Link, secondPart);
+    node1CloseLink = malloc(sizeof(firstPart) + sizeof(node1Ip) + sizeof(secondPartStop) + 1);
+    node2CloseLink = malloc(sizeof(firstPart) + sizeof(node2Ip) + sizeof(secondPartStop) + 1);
 
-    strcpy(node2Link, firstPart);
-    strcat(node2Link, node2Ip);
-    strcat(node2Link, secondPart);
+    strcpy(node1ImageLink, firstPart);
+    strcat(node1ImageLink, node1Ip);
+    strcat(node1ImageLink, secondPartImage);
+
+    strcpy(node2ImageLink, firstPart);
+    strcat(node2ImageLink, node2Ip);
+    strcat(node2ImageLink, secondPartImage);
+
+    strcpy(node1CloseLink, firstPart);
+    strcat(node1CloseLink, node1Ip);
+    strcat(node1CloseLink, secondPartStop);
+
+    strcpy(node2CloseLink, firstPart);
+    strcat(node2CloseLink, node2Ip);
+    strcat(node2CloseLink, secondPartStop);
 
     free(node1Ip);
     free(node2Ip);
@@ -100,6 +110,9 @@ void *sendImages(void *arg) {
         waitSemaphore(0);
 
         if (closeServer == 1) {
+            stopNode(node1CloseLink, 0);
+            stopNode(node2CloseLink, 1);
+
             break;
         }
         
@@ -109,16 +122,18 @@ void *sendImages(void *arg) {
         thread = getThread(node);
 
         json_object_set_new(image, "threadId", json_integer(thread));
+
+        ulfius_init_request(&requestConnection);
         
-        ulfius_set_request_properties(&request,
+        ulfius_set_request_properties(&requestConnection,
                                       U_OPT_HTTP_VERB, "POST",
                                       U_OPT_HTTP_URL, ip,
                                       U_OPT_JSON_BODY, image,
                                       U_OPT_NONE);
 
-        ulfius_init_response(&response);
+        ulfius_init_response(&responseConnection);
 
-        res = ulfius_send_http_request(&request, &response);
+        res = ulfius_send_http_request(&requestConnection, &responseConnection);
         if (res == U_OK) {
             printf("Image sent to node %d\n", node);
             writeToLogInt("Status: Image sent to node ", node);
@@ -128,14 +143,19 @@ void *sendImages(void *arg) {
             writeToLogInt("Status: Failed to send image to node ", node);
         }
 
-        ulfius_clean_response(&response);
-        ulfius_clean_request(&request);
+        ulfius_clean_response(&responseConnection);
+        ulfius_clean_request(&requestConnection);
 
         json_decref(image);
     }
     
-    free(node1Link);
-    free(node2Link);
+    free(node1ImageLink);
+    free(node2ImageLink);
+
+    free(node1CloseLink);
+    free(node2CloseLink);
+
+    pthread_exit(NULL);
 }
 
 int getNode() {
@@ -168,9 +188,9 @@ int getNode() {
 char* getIp(int node) {
     switch (node) {
     case 1:
-        return node1Link;
+        return node1ImageLink;
     case 2:
-        return node2Link;
+        return node2ImageLink;
     }
 }
 
@@ -195,4 +215,33 @@ int getThread(int node) {
         }
         break;
     }
+}
+
+int stopNode(char* ip, int node) {
+
+    int res;
+
+    ulfius_init_request(&requestConnection);
+        
+    ulfius_set_request_properties(&requestConnection,
+                                    U_OPT_HTTP_VERB, "GET",
+                                    U_OPT_HTTP_URL, ip,
+                                    U_OPT_NONE);
+
+    ulfius_init_response(&responseConnection);
+
+    res = ulfius_send_http_request(&requestConnection, &responseConnection);
+    if (res == U_OK) {
+        printf("Successfully stopped node %d\n", node);
+        writeToLogInt("Status: Successfully stopped node ", node);
+    }
+    else {
+        printf("Failed to stop node %d\n", node);
+        writeToLogInt("Status: Failed to stop node ", node);
+    }
+
+    ulfius_clean_response(&responseConnection);
+    ulfius_clean_request(&requestConnection);
+
+    return 0;
 }

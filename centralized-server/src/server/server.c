@@ -25,6 +25,7 @@ int startServer() {
             waitSemaphore(0);
 
             if (closeServer == 1) {
+                pthread_join(connectionThread, NULL);
                 sleep(1);
                 break;
             }
