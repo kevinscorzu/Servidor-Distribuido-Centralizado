@@ -5,6 +5,9 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
 int receiveConfirmation(const struct _u_request *request, struct _u_response *response, void *user_data);
 int stopServer(const struct _u_request *request, struct _u_response *response, void *user_data);
 
+/**
+ * Function that starts the server
+ */
 int startServer() {
 
     if (pthread_mutex_init(&lock, NULL) != 0) {
@@ -55,6 +58,9 @@ int startServer() {
     return 0;
 }
 
+/**
+ * Function that handles the cors of the server
+ */
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data) {
     u_map_put(response->map_header, "Access-Control-Allow-Origin", "*");
     u_map_put(response->map_header, "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -63,6 +69,9 @@ int allowCORS(const struct _u_request *request, struct _u_response *response, vo
     return U_CALLBACK_COMPLETE;
 }
 
+/**
+ * Function that receives an image from the client
+ */
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data) {
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
 
@@ -78,6 +87,9 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
     return U_CALLBACK_CONTINUE;
 }
 
+/**
+ * Function that receives confirmation from a node
+ */
 int receiveConfirmation(const struct _u_request *request, struct _u_response *response, void *user_data) {
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
 
@@ -108,6 +120,9 @@ int receiveConfirmation(const struct _u_request *request, struct _u_response *re
     return U_CALLBACK_CONTINUE;
 }
 
+/**
+ * Function that stops the server
+ */
 int stopServer(const struct _u_request *request, struct _u_response *response, void *user_data) {
     writeToLog("Status: Closing server");
     ulfius_set_string_body_response(response, 200, "Ok");

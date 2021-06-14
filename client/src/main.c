@@ -11,6 +11,9 @@ int encondeImage(char *imageName);
 size_t b64_encoded_size(size_t inlen);
 unsigned char *b64_encode(const unsigned char *in, size_t len);
 
+/**
+ * Main function of the client
+ */
 int main(int argc, char* argv[]) {
 
     int imagesToSend = 0;
@@ -101,6 +104,9 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
+/**
+ * Function that encodes an image to base64
+ */
 int encondeImage(char *imageName) {
     FILE *file;
 	size_t b64_decode_len;
@@ -136,6 +142,9 @@ int encondeImage(char *imageName) {
     return 0;
 }
 
+/**
+ * Function that finds the encoded size
+ */
 size_t b64_encoded_size(size_t inlen) {
 	size_t ret;
 
@@ -148,6 +157,9 @@ size_t b64_encoded_size(size_t inlen) {
 	return ret;
 }
 
+/**
+ * Function that creates the base64 string
+ */
 unsigned char *b64_encode(const unsigned char *in, size_t len) {
   
 	unsigned char *out;

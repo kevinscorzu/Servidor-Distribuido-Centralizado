@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "utils/semaphore.h"
 
+/**
+ * Main function of the clean file
+ */
 int main() {
     findSemaphore();
     closeSemaphore();

@@ -1,5 +1,8 @@
 #include "client.h"
 
+/**
+ * Function that makes the ips that will connect to the server
+ */
 void makeIp() {
 
     char *firstPart = "http://";
@@ -22,6 +25,9 @@ void makeIp() {
 
 }
 
+/**
+ * Function that stops the server
+ */
 int stopServer() {
 
     int res;
@@ -49,6 +55,9 @@ int stopServer() {
     return 0;
 }
 
+/**
+ * Function that sends an image to the server
+ */
 int sendImageToServer() {
 
     int res;

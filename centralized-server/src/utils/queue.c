@@ -1,11 +1,19 @@
 #include "queue.h"
 
+/**
+ * Function that initializes a queue
+ * Receives the queue to be initialized
+ */
 void queueInit(queue* list) {
     list->head = NULL;
     list->count = 0; 
     return;
 };
 
+/**
+ * Function that adds an item to a queue
+ * Receives the queue that will receive the new item and the item to be added
+ */
 void queueAddItem(queue* list, queueItem item) {
     queueNode* newNode = (queueNode*) malloc(sizeof(queueNode));
     if (newNode == NULL) {
@@ -32,6 +40,9 @@ void queueAddItem(queue* list, queueItem item) {
     return;
 }
 
+/**
+ * Function that returns the first item of a queue
+ */
 queueItem queueGetFirstItem(queue* list) {
     if(list->head == NULL){
         writeToLog("Status: Error the list is empty");

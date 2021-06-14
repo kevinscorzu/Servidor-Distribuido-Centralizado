@@ -7,6 +7,9 @@
 #include "server/server.h"
 #include "server/connect.h"
 
+/**
+ * Main function of the centralized server
+ */
 int main() {
     readConfigFile();
     queueInit(&imageList);

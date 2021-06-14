@@ -7,6 +7,9 @@ char* getIp(int node);
 int getThread(int node);
 int stopNode(char* ip, int node);
 
+/**
+ * Function that starts the connection thread
+ */
 int startNodeConnectionHandler() {
 
     for (int i = 0; i < 3; i++) {
@@ -27,6 +30,10 @@ int startNodeConnectionHandler() {
     return 0;
 }
 
+/**
+ * Function that updates the nodes current information
+ * Receives the id of the node and the thread id of the node
+ */
 int updateNodeImages(int id, int thread) {
 
     switch (id) {
@@ -63,6 +70,9 @@ int updateNodeImages(int id, int thread) {
     return 0;
 }
 
+/**
+ * Function that makes the ips to connect to the nodes
+ */
 void makeIps() {
 
     char* firstPart = "http://";
@@ -96,6 +106,9 @@ void makeIps() {
 
 }
 
+/**
+ * Function that sends images to the nodes
+ */
 void *sendImages(void *arg) {
     
     int node;
@@ -163,6 +176,9 @@ void *sendImages(void *arg) {
     pthread_exit(NULL);
 }
 
+/**
+ * Function that returns the node that will receive the image
+ */
 int getNode() {
 
     if (currentNode1ImagesCount == 3) {
@@ -190,6 +206,10 @@ int getNode() {
 
 }
 
+/**
+ * Function that returns the ip of the node that will be receive the image
+ * Receives the id of the node
+ */
 char* getIp(int node) {
     switch (node) {
     case 1:
@@ -199,6 +219,10 @@ char* getIp(int node) {
     }
 }
 
+/**
+ * Function that returns the thread that will handle the image
+ * Receives the id of the node
+ */
 int getThread(int node) {
     switch (node) {
     case 1:
@@ -222,6 +246,10 @@ int getThread(int node) {
     }
 }
 
+/**
+ * Function that stops the nodes
+ * Receives the ip of the node to be stopped and the integer of the node
+ */
 int stopNode(char* ip, int node) {
 
     int res;

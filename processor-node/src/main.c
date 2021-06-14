@@ -5,6 +5,9 @@
 #include "node/node.h"
 #include "node/image.h"
 
+/**
+ * Main function of the processor node
+ */
 int main() {
     readConfigFile();
     createSemaphore();

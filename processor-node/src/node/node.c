@@ -8,6 +8,9 @@ void *toAnalize(void *arg);
 void funciondGabo(int key, char *image);
 void confirmImageDone(int nodeId, int threadId);
 
+/**
+ * Function that starts the node
+ */
 int startNode() {
 
     struct _u_instance instance;
@@ -47,6 +50,9 @@ int startNode() {
     return 0;
 }
 
+/**
+ * Function that handles the cors of the server
+ */
 int allowCORS(const struct _u_request *request, struct _u_response *response, void *user_data) {
     u_map_put(response->map_header, "Access-Control-Allow-Origin", "*");
     u_map_put(response->map_header, "Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
@@ -55,6 +61,9 @@ int allowCORS(const struct _u_request *request, struct _u_response *response, vo
     return U_CALLBACK_COMPLETE;
 }
 
+/**
+ * Function that receives an image from the server
+ */
 int receiveImage(const struct _u_request *request, struct _u_response *response, void *user_data) {
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
 
@@ -114,6 +123,9 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
     return U_CALLBACK_CONTINUE;
 }
 
+/**
+ * Function that stops the node
+ */
 int stopNode(const struct _u_request *request, struct _u_response *response, void *user_data) {
     printf("Closing node\n");
     ulfius_set_string_body_response(response, 200, "Ok");

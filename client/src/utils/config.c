@@ -1,5 +1,8 @@
 #include "config.h"
 
+/**
+ * Function that reads the config file
+ */
 int readConfigFile() {
     config_t cfg;
     config_setting_t *setting;

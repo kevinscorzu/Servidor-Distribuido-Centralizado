@@ -13,6 +13,9 @@ void *toAnalize(void *arg);
 int decryptImage(int key, char* imageName);
 void confirmImageDone(int nodeId, int threadId);
 
+/**
+ * Function that initializes the threads that will handle the images
+ */
 void initializeImageHandler() {
 
     makeIp();
@@ -23,6 +26,9 @@ void initializeImageHandler() {
 
 }
 
+/**
+ * Function that make the ip to connect to the server
+ */
 void makeIp() {
 
     char *firstPart = "http://";
@@ -38,6 +44,9 @@ void makeIp() {
 
 }
 
+/**
+ * Function that handles an image
+ */
 void *toAnalize(void *arg) {
     int tid = (int) (__intptr_t) arg;
 
@@ -118,6 +127,9 @@ void *toAnalize(void *arg) {
     pthread_exit(NULL);
 }
 
+/**
+ * Function that decrypts an image
+ */
 int decryptImage(int key, char* imageName) {
     int width, height, channels;
     unsigned char *oldImage = stbi_load(imageName, &width, &height, &channels, 0);
@@ -144,6 +156,9 @@ int decryptImage(int key, char* imageName) {
     return 0;
 }
 
+/**
+ * Function alerts the server that it finished an image
+ */
 void confirmImageDone(int nodeId, int threadId) {
     struct _u_response response;
     struct _u_request request;

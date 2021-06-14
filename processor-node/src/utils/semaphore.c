@@ -1,5 +1,8 @@
 #include "semaphore.h"
 
+/**
+ * Function that creates the semaphores for the centralized server
+ */
 int createSemaphore() {
 
     semThreadMain = sem_open("semThreadMain", O_CREAT, 0644, 0);
@@ -33,6 +36,9 @@ int createSemaphore() {
     return 0;
 }
 
+/**
+ * Function that closes the semaphores of the centralized server
+ */
 int closeSemaphore() {
 
     if (sem_close(semThreadMain) != 0) {
@@ -78,6 +84,10 @@ int closeSemaphore() {
     return 0;
 }
 
+/**
+ * Function that waits a semaphore
+ * Receives an integer indicating the semaphore that will be used
+ */
 int waitSemaphore(int semaphore) {
 
     switch (semaphore) {
@@ -110,6 +120,10 @@ int waitSemaphore(int semaphore) {
     return 0;
 }
 
+/**
+ * Function that posts a semaphore
+ * Receives an integer indicating the semaphore that will be used
+ */
 int postSemaphore(int semaphore) {
     
     switch (semaphore) {
@@ -142,6 +156,9 @@ int postSemaphore(int semaphore) {
     return 0;
 }
 
+/**
+ * Function that finds semaphores for the centralized server
+ */
 int findSemaphore() {
     
     semThreadMain = sem_open("semThreadMain", 0);

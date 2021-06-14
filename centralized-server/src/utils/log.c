@@ -1,5 +1,9 @@
 #include "log.h"
 
+/**
+ * Function that writes a message to the log
+ * Receives the message to be written
+ */
 int writeToLog(char *message) {
     FILE *fp;
 
@@ -15,6 +19,10 @@ int writeToLog(char *message) {
     return 0;
 }
 
+/**
+ * Function that writes a number to the log
+ * Receives the message and number to be written
+ */
 int writeToLogInt(char *message, int number) {
     FILE *fp;
 
