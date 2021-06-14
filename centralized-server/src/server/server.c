@@ -73,11 +73,18 @@ int receiveConfirmation(const struct _u_request *request, struct _u_response *re
     json_t *jsonImage = ulfius_get_json_body_request(request, NULL);
 
     if (jsonImage != NULL) {
-        json_t *idJson = json_object_get(jsonImage, "id");
-        int id = json_integer_value(idJson);
-        updateNodeImages(id);
-        free(jsonImage);
-        free(idJson);
+        json_t *idNodeJson = json_object_get(jsonImage, "node");
+        int idNode = json_integer_value(idNodeJson);
+
+        json_t *idThreadJson = json_object_get(jsonImage, "thread");
+        int idThread = json_integer_value(idThreadJson);
+
+        updateNodeImages(idNode, idThread);
+
+        json_decref(jsonImage);
+        json_decref(idNodeJson);
+        json_decref(idThreadJson);
+
         postSemaphore(1);
         writeToLog("Status: Confirmation received");
     } else {
