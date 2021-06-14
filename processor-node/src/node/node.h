@@ -16,8 +16,14 @@ pthread_t t0;
 pthread_t t1;
 pthread_t t2;
 
-char *image;
-int key;
+char *image0;
+int key0;
+
+char *image1;
+int key1;
+
+char *image2;     
+int key2;
 
 int port;
 int id;
