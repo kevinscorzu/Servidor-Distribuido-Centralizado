@@ -1,7 +1,16 @@
 #include "image.h"
 
+#define STB_IMAGE_IMPLEMENTATION
+#define STBI_NO_HDR
+#define STBI_NO_LINEAR
+#include "../../../stb/stb_image.h"
+
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "../../../stb/stb_image_write.h"
+
 void makeIp();
 void *toAnalize(void *arg);
+int decryptImage(int key, char* imageName);
 void confirmImageDone(int nodeId, int threadId);
 
 void initializeImageHandler() {
@@ -34,6 +43,9 @@ void *toAnalize(void *arg) {
 
     int keyLocal = 0;
     char* imageLocal;
+    char* imageNameLocalTXT;
+    char* imageNameLocalJPG;
+    char* decodeCommand;
 
     while(1){
         waitSemaphore(tid);
@@ -43,21 +55,62 @@ void *toAnalize(void *arg) {
 
         switch (tid) {
         case 1:
+            imageNameLocalTXT = malloc(strlen(imageName0) + strlen(".txt") + 1);
+            strcpy(imageNameLocalTXT, imageName0);
+            strcat(imageNameLocalTXT, ".txt");
+
+            imageNameLocalJPG = malloc(strlen(imageName0) + 1);
+            strcpy(imageNameLocalJPG, imageName0);
+
             imageLocal = image0;
             keyLocal = key0;
             break;
         case 2:
+            imageNameLocalTXT = malloc(strlen(imageName0) + strlen(".txt") + 1);
+            strcpy(imageNameLocalTXT, imageName1);
+            strcat(imageNameLocalTXT, ".txt");
+
+            imageNameLocalJPG = malloc(strlen(imageName1) + 1);
+            strcpy(imageNameLocalJPG, imageName1);
+
             imageLocal = image1;
             keyLocal = key1;
             break;
         case 3:
+            imageNameLocalTXT = malloc(strlen(imageName0) + strlen(".txt") + 1);
+            strcpy(imageNameLocalTXT, imageName2);
+            strcat(imageNameLocalTXT, ".txt");
+
+            imageNameLocalJPG = malloc(strlen(imageName2) + 1);
+            strcpy(imageNameLocalJPG, imageName2);
+
             imageLocal = image2;
             keyLocal = key2;
             break;
         }
 
-        //funciondGabo(keyLocal,imageLocal);
+        FILE *file = fopen(imageNameLocalTXT, "w");
+        if (!file) {
+            printf("Unable to create file %s", imageNameLocalTXT);
+            exit(EXIT_FAILURE);
+        }
 
+        fprintf(file, "%s", imageLocal);
+        fclose(file);
+
+        decodeCommand = malloc(strlen(imageNameLocalTXT) + strlen(imageNameLocalJPG) + strlen("base64 --decode  > ") + 1);
+        strcpy(decodeCommand, "base64 --decode ");
+        strcat(decodeCommand, imageNameLocalTXT);
+        strcat(decodeCommand, " > ");
+        strcat(decodeCommand, imageNameLocalJPG);
+
+        system(decodeCommand);
+        remove(imageNameLocalTXT);
+
+        decryptImage(keyLocal, imageNameLocalJPG);
+
+        free(imageNameLocalTXT);
+        free(imageNameLocalJPG);
         free(imageLocal);
         confirmImageDone(id, tid);
     }
@@ -65,6 +118,31 @@ void *toAnalize(void *arg) {
     pthread_exit(NULL);
 }
 
+int decryptImage(int key, char* imageName) {
+    int width, height, channels;
+    unsigned char *oldImage = stbi_load(imageName, &width, &height, &channels, 0);
+
+    if(oldImage == NULL) {
+        printf("Error loading the image\n");
+        exit(EXIT_FAILURE);
+    }
+    int img_size = width * height * channels;
+
+    unsigned char newImage[img_size];
+    unsigned char* p = newImage;
+
+    for (int i = 0; i < img_size; i++) {
+        *p = *oldImage ^ key;
+        p += 1;
+        oldImage += 1;
+    }
+
+    remove(imageName);
+
+    stbi_write_jpg(imageName, width, height, channels, newImage, 100);
+    
+    return 0;
+}
 
 void confirmImageDone(int nodeId, int threadId) {
     struct _u_response response;

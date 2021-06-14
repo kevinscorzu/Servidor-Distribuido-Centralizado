@@ -11,12 +11,15 @@
 #include "../utils/semaphore.h"
 #include "image.h"
 
+char *imageName0;
 char *image0;
 int key0;
 
+char *imageName1;
 char *image1;
 int key1;
 
+char *imageName2;
 char *image2;     
 int key2;
 

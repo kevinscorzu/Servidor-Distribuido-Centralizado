@@ -155,9 +155,9 @@ int picture_get(){//const struct _u_request * request, struct _u_response * resp
     char *base64_encode_string;
     char *base64_decode_string;
     unsigned char *buffer;
-    const char * name = "/home/gabriel/Documentos/Repositorios/Servidor-Distribuido-Centralizado/image-processor/oggy.jpg";
-    const char * name_file_encode= "/home/gabriel/Documentos/Repositorios/Servidor-Distribuido-Centralizado/image-processor/encode.txt";
-    const char * name_file_decode= "/home/gabriel/Documentos/Repositorios/Servidor-Distribuido-Centralizado/image-processor/decode.txt";
+    const char * name = "oggy.jpg";
+    const char * name_file_encode= "encode.txt";
+    const char * name_file_decode= "decode.txt";
 
     file = fopen(name , "rb");
     file_w = fopen(name_file_encode,"w");
@@ -209,7 +209,7 @@ int picture_get(){//const struct _u_request * request, struct _u_response * resp
 
 int main(){
     picture_get();
-    system("base64 --decode /home/gabriel/Documentos/Repositorios/Servidor-Distribuido-Centralizado/image-processor/encode.txt > /home/gabriel/Documentos/Repositorios/Servidor-Distribuido-Centralizado/image-processor/decode.jpg");
+    system("base64 --decode encode.txt > decode.jpg");
 }
 
 //https://nachtimwald.com/2017/11/18/base64-encode-and-decode-in-c/

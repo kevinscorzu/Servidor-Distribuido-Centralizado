@@ -71,6 +71,11 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
         imgB64 = json_object_get(jsonImage, "image");
         const char * img = json_string_value(imgB64);
 
+        // Get image name
+        json_auto_t * imgName = NULL;
+        imgName = json_object_get(jsonImage, "name");
+        const char * imgN = json_string_value(imgName);
+
         // Get key 
         json_auto_t * cypher = NULL;
         cypher = json_object_get(jsonImage, "key");
@@ -78,14 +83,17 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
         switch (tid) {
         case 1:
             image0 = strdup(img);
+            imageName0 = strdup(imgN);
             key0 = json_integer_value(cypher);
             break;
         case 2:
             image1 = strdup(img);
+            imageName1 = strdup(imgN);
             key1 = json_integer_value(cypher);
             break;
         case 3:
             image2 = strdup(img);
+            imageName2 = strdup(imgN);
             key2 = json_integer_value(cypher);
             break;
         }
@@ -93,6 +101,7 @@ int receiveImage(const struct _u_request *request, struct _u_response *response,
         json_decref(jsonImage);
         json_decref(idThread);
         json_decref(imgB64);
+        json_decref(imgName);
         json_decref(cypher);
 
         postSemaphore(tid);
