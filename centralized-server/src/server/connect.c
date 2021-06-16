@@ -79,11 +79,11 @@ void makeIps() {
     char* secondPartImage = "/Node/Analyze";
     char* secondPartStop = "/Node/Stop";
 
-    node1ImageLink = malloc(sizeof(firstPart) + sizeof(node1Ip) + sizeof(secondPartImage) + 1);
-    node2ImageLink = malloc(sizeof(firstPart) + sizeof(node2Ip) + sizeof(secondPartImage) + 1);
+    node1ImageLink = malloc(strlen(firstPart) + strlen(node1Ip) + strlen(secondPartImage) + 1);
+    node2ImageLink = malloc(strlen(firstPart) + strlen(node2Ip) + strlen(secondPartImage) + 1);
 
-    node1CloseLink = malloc(sizeof(firstPart) + sizeof(node1Ip) + sizeof(secondPartStop) + 1);
-    node2CloseLink = malloc(sizeof(firstPart) + sizeof(node2Ip) + sizeof(secondPartStop) + 1);
+    node1CloseLink = malloc(strlen(firstPart) + strlen(node1Ip) + strlen(secondPartStop) + 1);
+    node2CloseLink = malloc(strlen(firstPart) + strlen(node2Ip) + strlen(secondPartStop) + 1);
 
     strcpy(node1ImageLink, firstPart);
     strcat(node1ImageLink, node1Ip);

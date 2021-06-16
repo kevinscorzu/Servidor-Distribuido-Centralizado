@@ -19,7 +19,7 @@ int readConfigFile() {
     }
 
     if(config_lookup_string(&cfg, "serverIp", &serverIpTemp)) {
-        serverIp = malloc(sizeof(serverIpTemp));
+        serverIp = malloc(strlen(serverIpTemp) + 1);
         strcpy(serverIp, serverIpTemp);
         
         printf("Successfully read config file\n");

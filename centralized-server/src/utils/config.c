@@ -37,10 +37,10 @@ int readConfigFile() {
         exit(EXIT_FAILURE);
     }
 
-    node1Ip = malloc(sizeof(node1IpTemp));
+    node1Ip = malloc(strlen(node1IpTemp));
     strcpy(node1Ip, node1IpTemp);
 
-    node2Ip = malloc(sizeof(node2IpTemp));
+    node2Ip = malloc(strlen(node2IpTemp));
     strcpy(node2Ip, node2IpTemp);   
 
     writeToLog("Status: Successfully read config file");

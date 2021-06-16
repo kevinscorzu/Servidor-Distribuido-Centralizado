@@ -34,7 +34,7 @@ void makeIp() {
     char *firstPart = "http://";
     char *secondPart = "/Api/Confirm";
 
-    serverLink = malloc(sizeof(firstPart) + sizeof(serverIp) + sizeof(secondPart) + 1);
+    serverLink = malloc(strlen(firstPart) + strlen(serverIp) + strlen(secondPart) + 1);
 
     strcpy(serverLink, firstPart);
     strcat(serverLink, serverIp);

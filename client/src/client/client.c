@@ -9,9 +9,9 @@ void makeIp() {
     char *secondPartImage = "/Api/Analyze";
     char* secondPartStop = "/Api/Stop";
 
-    serverImageLink = malloc(sizeof(firstPart) + sizeof(serverIp) + sizeof(secondPartImage) + 1);
+    serverImageLink = malloc(strlen(firstPart) + strlen(serverIp) + strlen(secondPartImage) + 1);
 
-    serverCloseLink = malloc(sizeof(firstPart) + sizeof(serverIp) + sizeof(secondPartStop) + 1);
+    serverCloseLink = malloc(strlen(firstPart) + strlen(serverIp) + strlen(secondPartStop) + 1);
 
     strcpy(serverImageLink, firstPart);
     strcat(serverImageLink, serverIp);
