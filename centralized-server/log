@@ -2722,3 +2722,935 @@ Wed Jun 16 14:27:25 2021
  - Status: Successfully started the connection handler thread
 Wed Jun 16 14:27:25 2021
  - Status: Start server on port:  2020
+Wed Jun 16 14:38:09 2021
+ - Status: Successfully read config file
+Wed Jun 16 14:38:09 2021
+ - Status: Successfully started the connection handler thread
+Wed Jun 16 14:38:09 2021
+ - Status: Start server on port:  2020
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:00 2021
+ - Status: Image received
+Wed Jun 16 14:39:04 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:04 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:06 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:07 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:09 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:09 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:11 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:11 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:13 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:14 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:16 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:16 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:18 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:18 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:20 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:21 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:22 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image received
+Wed Jun 16 14:39:23 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:23 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:25 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:25 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:28 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:28 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:30 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:30 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:32 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:33 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:35 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:35 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:37 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:37 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:40 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:40 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:42 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:42 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:43 2021
+ - Status: Image received
+Wed Jun 16 14:39:44 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:44 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:47 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:47 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:49 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:49 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:51 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:52 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:53 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:54 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:56 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:39:56 2021
+ - Status: Confirmation received
+Wed Jun 16 14:39:58 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:39:58 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:01 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:01 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:03 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:03 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:05 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:06 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:13 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:13 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:15 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:15 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:17 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:18 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:20 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:20 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:22 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:22 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:24 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:25 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:27 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:27 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:29 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:30 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:32 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:32 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:34 2021
+ - Status: Image received
+Wed Jun 16 14:40:35 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:36 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:38 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:38 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:40 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:41 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:43 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:43 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:45 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:45 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:47 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:47 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:49 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:49 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:51 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:51 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:53 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:53 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:55 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:55 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:57 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:40:57 2021
+ - Status: Confirmation received
+Wed Jun 16 14:40:59 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:40:59 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:01 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:01 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:03 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:03 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:05 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:05 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:07 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:07 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:09 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:09 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:11 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:11 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:13 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:13 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:15 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:15 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:17 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:17 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:19 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:19 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:21 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:21 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:23 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:23 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:26 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:26 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:27 2021
+ - Status: Image received
+Wed Jun 16 14:41:28 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:28 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:30 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:31 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:33 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:33 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:35 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:35 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:37 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:37 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:39 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:40 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:42 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:42 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:44 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:45 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:47 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:47 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:49 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:49 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:51 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:52 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:53 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:54 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:56 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:41:56 2021
+ - Status: Confirmation received
+Wed Jun 16 14:41:58 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:41:58 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:00 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:01 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:03 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:03 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:05 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:05 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:07 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:07 2021
+ - Status: Image received
+Wed Jun 16 14:42:08 2021
+ - Status: Image received
+Wed Jun 16 14:42:08 2021
+ - Status: Image received
+Wed Jun 16 14:42:08 2021
+ - Status: Image received
+Wed Jun 16 14:42:09 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:10 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:12 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:12 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:14 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:14 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:16 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:16 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:18 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:19 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:20 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:21 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:22 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:23 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:24 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:25 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:27 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:27 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:29 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:29 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:31 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:31 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:33 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:33 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:35 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:35 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:37 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:37 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:39 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:39 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:41 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:41 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:43 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:43 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:45 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:45 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:47 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:47 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:49 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:50 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:51 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:52 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:53 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:54 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:55 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:42:56 2021
+ - Status: Confirmation received
+Wed Jun 16 14:42:57 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:42:58 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:00 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:00 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:02 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:02 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:04 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:04 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:06 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:06 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:08 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:08 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:10 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:10 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:12 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:12 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:14 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:14 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:16 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:16 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:18 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:19 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:21 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:21 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:23 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:23 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:25 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:25 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:27 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:27 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:29 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:29 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:31 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:31 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:33 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:33 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:35 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:35 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:37 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:37 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:39 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:40 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:41 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:41 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:43 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:43 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:45 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:46 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:47 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:48 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:49 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:50 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:52 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:43:52 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:54 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:43:54 2021
+ - Status: Confirmation received
+Wed Jun 16 14:43:57 2021
+ - Status: Closing server
+Wed Jun 16 14:43:57 2021
+ - Status: Successfully stopped node  0
+Wed Jun 16 14:43:57 2021
+ - Status: Successfully stopped node  1
+Wed Jun 16 14:46:13 2021
+ - Status: Successfully read config file
+Wed Jun 16 14:46:13 2021
+ - Status: Successfully started the connection handler thread
+Wed Jun 16 14:46:13 2021
+ - Status: Start server on port:  2020
+Wed Jun 16 14:48:03 2021
+ - Status: Successfully read config file
+Wed Jun 16 14:48:03 2021
+ - Status: Successfully started the connection handler thread
+Wed Jun 16 14:48:03 2021
+ - Status: Start server on port:  2020
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:54 2021
+ - Status: Image received
+Wed Jun 16 14:48:56 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:48:57 2021
+ - Status: Confirmation received
+Wed Jun 16 14:48:59 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:48:59 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:01 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:01 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:03 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:03 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:06 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:06 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:08 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:08 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:10 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:10 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:12 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:13 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:15 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:15 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:17 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:17 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:19 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:20 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:22 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:22 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:24 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:24 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:26 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:26 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:28 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:28 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:30 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:30 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:32 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:33 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:35 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:35 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:37 2021
+ - Status: Image sent to node  2
+Wed Jun 16 14:49:37 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:39 2021
+ - Status: Image sent to node  1
+Wed Jun 16 14:49:39 2021
+ - Status: Confirmation received
+Wed Jun 16 14:49:42 2021
+ - Status: Closing server
+Wed Jun 16 14:49:42 2021
+ - Status: Successfully stopped node  0
+Wed Jun 16 14:49:43 2021
+ - Status: Successfully stopped node  1
+Wed Jun 16 14:49:44 2021
+ - Status: Server ended
